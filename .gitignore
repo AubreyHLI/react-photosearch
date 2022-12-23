@@ -4,3 +4,6 @@ public
 
 # misc
 .DS_Store
+
+# production
+/build
