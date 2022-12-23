@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/react-photosearch/static/css/main.c4c16008.css",
+    "main.css": "/react-photosearch/static/css/main.501130aa.css",
     "main.js": "/react-photosearch/static/js/main.6a67f70c.js",
     "index.html": "/react-photosearch/index.html",
-    "main.c4c16008.css.map": "/react-photosearch/static/css/main.c4c16008.css.map",
+    "main.501130aa.css.map": "/react-photosearch/static/css/main.501130aa.css.map",
     "main.6a67f70c.js.map": "/react-photosearch/static/js/main.6a67f70c.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4c16008.css",
+    "static/css/main.501130aa.css",
     "static/js/main.6a67f70c.js"
   ]
 }
