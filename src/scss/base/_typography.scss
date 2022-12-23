@@ -17,21 +17,6 @@ li {
   list-style: none;
 }
 
-input {
-  font-size: 1.12em;
-  background: none;
-  outline: 0;
-  @include layout($h: 46px, $bor: none);
-  border-bottom: 4px solid $color-border-1;
-  transition: border-color .4s;
-  padding-bottom: 10px; 
-
-  &:focus {
-    border-color: $color-border-2;
-  }
-}
-
-
 /* ============================================= */
 /*                Typography                     */
 /* ============================================= */

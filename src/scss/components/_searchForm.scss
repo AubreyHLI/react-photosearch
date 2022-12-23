@@ -11,10 +11,26 @@
 		margin-top: 34px;
 	}
 
+	input {
+		margin-right: -40px;
+		padding: 0 35px 0 10px;
+		font-size: 1.12em;
+		background: none;
+		outline: 0;
+		@include layout($h: 46px, $bor: none);
+		border-bottom: 4px solid $color-border-1;
+		transition: border-color .4s;
+		padding-bottom: 10px; 
+	  
+		&:focus {
+		  border-color: $color-border-2;
+		}
+	}
+
 	input:only-of-type {
 		width: 100%;
 		margin-right: -40px;
-		padding-right: 35px;
+		padding: 0 35px 0 10px;
 	}
 
 	.search-button {
