@@ -1,0 +1,35 @@
+@use '../utilities' as *;
+/* ============================================= */
+/*                Photo List                     */
+/* ============================================= */
+.main-content {
+  width: 100%;
+  text-align: center;
+}
+
+.photo-list {
+  @include gridy($gtc: 1fr, $gap: .8em 0);
+  @include meqe($breakpoint-s) {
+    gap: 1px;
+    @include grid-col-repeat(2, 1fr);
+  }
+  @include meqe($breakpoint-m) {
+    @include grid-col-repeat(3, 1fr);
+  }
+}
+
+.photo-wrap {
+  height: 300px;
+  @include meqe($breakpoint-m) {
+    border: .5px solid $color-primary;
+  }
+
+  img {
+    opacity: 1;
+    object-fit: cover;
+    @include layout($w: 100%, $h: 100%);
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

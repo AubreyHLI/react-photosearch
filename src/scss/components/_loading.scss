@@ -1,0 +1,20 @@
+@use '../utilities' as *;
+/* ============================================= */
+/*               Loading Spin                    */
+/* ============================================= */
+.loading {
+  width: 100%; /* Full width */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+.loading-spinner {
+  @include layout($w:60px, $h:60px, $m:30px auto, $bor:6px solid $color-btn-bg1, $rad:50%);
+  border-color: $color-btn-bg1 $color-btn-bg3 $color-btn-bg1 $color-btn-bg3;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@include animation-mixin(spin) {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

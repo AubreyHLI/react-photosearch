@@ -1,0 +1,81 @@
+// ============================================= 
+//                  Mixins                       
+// ============================================= 
+
+// Grid
+@mixin gridy($dis: grid, $gtc: null, $gtr: null, $gap: null, $align: center) {
+    display: $dis;
+    grid-template-columns: $gtc;
+    grid-template-rows: $gtr;
+    align-items: $align;
+    gap: $gap;
+    @content;
+}
+
+@mixin grid-col-repeat($count, $w) {
+	grid-template-columns: repeat($count, $w);
+}
+
+// Flexbox
+@mixin flexy($dis: flex, $dire: null, $justi: null, $align: center, $lh: null, $gap: null) {
+	display: $dis;
+	flex-direction: $dire;
+    justify-content: $justi;
+    align-items: $align;
+    line-height: $lh;
+    gap: $gap;
+    @content;
+}
+
+// Layout
+@mixin layout($m: null, $p: null, $w: null, $h: null, $minw:null, $maxw: null, $minh:null, $maxh:null, $rad:null, $bor: null) {
+    margin: $m;
+    padding: $p;
+    width: $w;
+    height: $h;
+    min-width: $minw;
+    max-width: $maxw;
+    min-height: $minh;
+    max-height: $maxh;
+    border-radius: $rad;
+    border: $bor;
+}
+
+@mixin position-design($pos, $t:null, $b:null, $l:null, $r:null) {
+    position: $pos;
+    top: $t;
+    bottom: $b;
+    left: $l;
+    right: $r;
+}
+
+// Font Design
+@mixin font-design($ff: null, $fs: null, $fw: null, $fc: null, $bgc: null) {
+    font-family: $ff;
+    font-size: $fs;
+    font-weight: $fw;
+    color: $fc;
+    background-color: $bgc;
+}
+
+// Media Queries
+@mixin meqe($bpvalue) {
+	@if $bpvalue == null {
+		@error '`#{$bpvalue}` is not a valid breakpoint value.';
+	}
+	@else {
+		@media (min-width: $bpvalue) {
+			@content; //允许media query更改rule properties
+		}
+	}
+}
+
+// Animation
+@mixin animation-mixin($name) {
+    @-webkit-keyframes #{$name} {
+      @content;
+    }
+    @keyframes #{$name} {
+      @content;
+    }
+}

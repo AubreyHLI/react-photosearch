@@ -1,0 +1,78 @@
+@use '../utilities' as *;
+/* ============================================= */
+/*                    Modal                      */
+/* ============================================= */
+
+// The Modal (background) 
+.overlay {
+  background-color: $color-overlay-bg; 
+  overflow: auto; /* Enable scroll if needed */
+  z-index: 1000;
+  @include position-design(fixed, 0, 0, 0, 0);
+  @include layout($w:100%, $h:100%);
+}
+
+.modal {
+  outline: none;
+  background-color: $color-primary;
+  @include flexy($dire:column, $justi: center, $align:null);
+  @include layout($h:100%, $minh:$modal-min-height, $p:50px 0 10px);
+  
+  @include meqe($breakpoint-m) {
+    box-shadow: 0 8px 16px $color-shadow;
+    @include layout($m:$modal-margin-y 90px, $p:0, $h: calc(100% - 2 * $modal-margin-y));
+  }
+  @include meqe($breakpoint-l) {
+    margin: $modal-margin-y 120px;
+  }
+}
+
+.modal-container {
+  max-height: calc(100% - 90px);
+  @include flexy($dire:column, $justi:center);
+  @include meqe($breakpoint-m) {
+    flex-grow: 1;
+    padding: 30px 16px 0;
+  }
+
+  .btn-arrow {
+    opacity: 0;
+    transition: opacity .2s ease;
+    @include meqe($breakpoint-m) {
+      opacity: 1;
+    }
+  }
+
+  &:hover .btn-arrow{
+    opacity: 1;
+  }
+} 
+
+.photographer {
+  padding: 16px 10px;
+  @include meqe($breakpoint-m) { 
+    padding: 15px 30px 50px; 
+  }
+
+  p {
+    line-height: 1.35;
+    letter-spacing: .1em;
+    text-transform: capitalize;
+    @include font-design($fs:16px, $fw:500);
+  }
+}
+
+.modal-container img{  
+  object-fit: contain;
+  @include layout($w:100%, $h:auto, $maxh:100%);
+  @include meqe($breakpoint-m) {
+    @include layout($w:auto, $h:100%, $maxw:100%);
+  }
+  -webkit-animation: zoom .8s; 
+  animation: zoom .8s;
+}
+
+@include animation-mixin(zoom) {
+  from {-webkit-transform:scale(0.6)} 
+  to {-webkit-transform:scale(1)}
+}

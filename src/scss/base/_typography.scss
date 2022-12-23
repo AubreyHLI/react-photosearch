@@ -1,0 +1,55 @@
+@use '../utilities' as *;
+/* ============================================= */
+/*              Base Element                     */
+/* ============================================= */
+
+* {
+  box-sizing: border-box;
+  @include layout($m: 0, $p: 0);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+input {
+  font-size: 1.12em;
+  background: none;
+  outline: 0;
+  @include layout($h: 46px, $bor: none);
+  border-bottom: 4px solid $color-border-1;
+  transition: border-color .4s;
+  padding-bottom: 10px; 
+
+  &:focus {
+    border-color: $color-border-2;
+  }
+}
+
+
+/* ============================================= */
+/*                Typography                     */
+/* ============================================= */
+body {
+  padding-top: 145px;
+  padding-bottom: 3em;
+  min-width: $min-width;
+  @include font-design($fs: 16px, $ff: $font-family-primary, $fc: $colro-font-primary, $bgc: $color-bg);
+  @include meqe(768px) { 
+    padding-top: 115px;
+  }
+}
+
+.inner {
+  @include layout($w:90%, $maxw:$inner-max-width, $m:auto);
+}
+
+.hidden{
+  display:none;
+}
+

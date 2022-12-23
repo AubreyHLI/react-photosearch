@@ -1,0 +1,15 @@
+@use '../utilities' as *;
+/* ============================================= */
+/*                 No Photos                     */
+/* ============================================= */
+.no-photos  {
+  @include font-design($fs:1.25em, $fc:$color-font-secondary);
+  @include layout($h:140px, $p:30px 0 0);
+  text-align: center;
+}
+
+.icon-sad {
+  font-size: 5em;
+  margin-bottom: 40px;
+  display: block;
+}

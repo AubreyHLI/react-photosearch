@@ -1,0 +1,35 @@
+@use '../utilities' as *;
+/* ============================================= */
+/*                Search Form                    */
+/* ============================================= */
+
+.search-form { 
+	width: 100%;
+	@include meqe($breakpoint-m) {
+		width: 422px;
+		float: right;
+		margin-top: 34px;
+	}
+
+	input:only-of-type {
+		width: 100%;
+		margin-right: -40px;
+		padding-right: 35px;
+	}
+
+	.search-button {
+		float: right;
+		margin-right: -10px;
+		border: 0;
+		background: none;
+		outline: 0;
+		position: relative;
+		cursor: pointer;
+		@include layout($w:40px, $h:35px);
+	}
+
+	.icon-search {
+		font-weight: 700;
+	}
+
+}

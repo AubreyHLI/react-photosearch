@@ -1,0 +1,57 @@
+@use '../utilities' as *;
+/* ============================================= */
+/*                   Buttons                     */
+/* ============================================= */
+
+/* Load More button */
+.btn {
+    cursor: pointer;
+    &:hover {
+        @include meqe($breakpoint-m) {
+            color: $color-primary;
+            transform: scale(1.1);
+            transition: transform 0.2s;
+        }
+    }
+}
+
+.load-more-btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    @include layout($m:30px auto, $p:20px 50px, $w:max-content, $h:max-content);
+    @include font-design($fs:14px, $fw:500, $fc:$color-primary, $bgc: $color-btn-bg1);
+}
+
+
+.btn-arrow {
+    transition: transform 0.3s;
+    @include font-design($fs:60px, $bgc:$color-btn-bg2);
+    @include layout($m:auto 0, $p:10px, $h:100px, $rad: 5px);
+    @include position-design($pos:fixed, $t:0, $b:0);
+    @include flexy;
+    
+    @include meqe($breakpoint-m) {
+        @include layout($m:auto 30px, $h:140px);
+        @include font-design($fs:100px, $fc:$color-font-btn, $bgc:$color-btn-bg3);   
+    }
+}
+
+.prev-btn {
+    left: 0;
+} 
+.next-btn {
+    right: 0;
+}
+
+.close-btn {
+    line-height: 28px;
+    @include layout($p:8px, $rad:8px);
+    @include font-design($fs:40px, $fw:bold);
+    @include position-design($pos:fixed, $t:0, $l:4px);
+    @include meqe($breakpoint-m){
+        color: $color-font-btn;
+    }
+}
+
+

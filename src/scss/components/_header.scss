@@ -1,0 +1,23 @@
+@use '../utilities' as *;
+/* ============================================= */
+/*                    Header                     */
+/* ============================================= */
+.main-header {
+  background: $color-primary;
+  z-index: 1000;
+  @include position-design($pos:fixed, $t:0, $l:0);
+  @include layout($w:100%, $minh: $header-min-height);
+}
+
+.main-title {
+  font-size: 1.4em;
+  line-height: 80px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 16px 0 0;
+  @include meqe($breakpoint-m) {
+    float: left;
+    margin-bottom: 16px;
+  }
+}

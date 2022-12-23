@@ -1,0 +1,37 @@
+// ============================================= 
+//                Variables                      
+// ============================================= 
+
+// Colors
+$color-primary: #ffffff;
+$color-bg:  #f6f7f7;
+
+$colro-font-primary: #4c4c4c;
+$color-font-secondary: #7bcbc4;
+$color-font-btn: #d1d1d1;
+
+$color-btn-bg1: black;
+$color-btn-bg2:rgba(255,255,255,0.8);
+$color-btn-bg3: transparent;
+
+$color-overlay-bg: rgba(0, 0, 0, 0.7);
+$color-shadow: #00000026;
+
+$color-border-1: #e4e4e4;
+$color-border-2: #c1c1c1;
+
+// Fonts
+$font-family-primary: 'Roboto', sans-serif;
+
+// Layout
+$min-width: 320px;
+$header-min-height: 80px;
+$modal-margin-y: 20px;
+
+$modal-min-height: 600px;
+$inner-max-width: 1025px;
+
+// Breakpoints
+$breakpoint-s: 550px;
+$breakpoint-m: 768px;
+$breakpoint-l: 1400px;
